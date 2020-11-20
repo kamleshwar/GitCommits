@@ -9,7 +9,14 @@
 import Foundation
 
 public struct Commits: Decodable {
-    let message: String
-    let author: String
+    let commit: Commit
+    
+    struct Commit: Decodable {
+        let message: String
+        let author: Author
+        struct Author: Decodable {
+            let name: String
+        }
+    }
     let sha: String
 }
