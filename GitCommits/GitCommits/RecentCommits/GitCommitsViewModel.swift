@@ -15,7 +15,7 @@ public class GitCommitsViewModel {
         self.service = service
     }
     
-    public func fetchCommits(completion: @escaping (Result<[Commits], Error>) -> Void) {
+    public func fetchCommits(completion: @escaping (Result<[Commits], CustomError>) -> Void) {
         self.service.fetchCommits(completion: completion)
     }
 }
