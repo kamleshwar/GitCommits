@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		00AC176B25676E5E003CD1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC176A25676E5E003CD1EE /* AppDelegate.swift */; };
 		00AC176D25676E5E003CD1EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC176C25676E5E003CD1EE /* SceneDelegate.swift */; };
-		00AC176F25676E5E003CD1EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC176E25676E5E003CD1EE /* ViewController.swift */; };
+		00AC176F25676E5E003CD1EE /* GitCommitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC176E25676E5E003CD1EE /* GitCommitsViewController.swift */; };
 		00AC177225676E5E003CD1EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AC177025676E5E003CD1EE /* Main.storyboard */; };
 		00AC177425676E62003CD1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00AC177325676E62003CD1EE /* Assets.xcassets */; };
 		00AC177725676E62003CD1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AC177525676E62003CD1EE /* LaunchScreen.storyboard */; };
@@ -33,7 +33,7 @@
 		00AC176725676E5E003CD1EE /* GitCommits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitCommits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AC176A25676E5E003CD1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00AC176C25676E5E003CD1EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00AC176E25676E5E003CD1EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00AC176E25676E5E003CD1EE /* GitCommitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommitsViewController.swift; sourceTree = "<group>"; };
 		00AC177125676E5E003CD1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00AC177325676E62003CD1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00AC177625676E62003CD1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				00AC178E2567730F003CD1EE /* NetworkClient.swift */,
 				00AC179025677553003CD1EE /* CommitsModel.swift */,
 				00AC178C256770F4003CD1EE /* GitCommitsViewModel.swift */,
-				00AC176E25676E5E003CD1EE /* ViewController.swift */,
+				00AC176E25676E5E003CD1EE /* GitCommitsViewController.swift */,
 			);
 			path = RecentCommits;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			files = (
 				00AC178D256770F4003CD1EE /* GitCommitsViewModel.swift in Sources */,
 				00AC178F2567730F003CD1EE /* NetworkClient.swift in Sources */,
-				00AC176F25676E5E003CD1EE /* ViewController.swift in Sources */,
+				00AC176F25676E5E003CD1EE /* GitCommitsViewController.swift in Sources */,
 				00AC176B25676E5E003CD1EE /* AppDelegate.swift in Sources */,
 				00AC179125677553003CD1EE /* CommitsModel.swift in Sources */,
 				00AC176D25676E5E003CD1EE /* SceneDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GitCommitsViewController.swift
 //  GitCommits
 //
 //  Created by Kamleshwar on 11/19/20.
@@ -19,7 +19,7 @@ import UIKit
  Git Repo = ReactiveX/RxSwift/
  */
 
-class ViewController: UIViewController {
+class GitCommitsViewController: UIViewController {
     private let viewModel = GitCommitsViewModel()
     private var commitModels = [Commits]()
     
@@ -53,15 +53,16 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension GitCommitsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return commitModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "commits")
-        let commit = commitModels[indexPath.row]
-        cell.textLabel?.text = commit.commit.author.name
+        let recent = commitModels[indexPath.row]
+        cell.textLabel?.text = recent.commit.author.name.uppercased()
+        cell.detailTextLabel?.text = "\(recent.commit.message), SHA: \(recent.sha)"
         return cell
     }
 }
