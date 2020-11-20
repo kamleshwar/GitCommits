@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        viewModel.fetchCommits(completion: { _ in })
+        viewModel.fetchCommits() { result in
+            print(result)
+        }
     }
 }

@@ -8,8 +8,8 @@
 
 import Foundation
 
-class GitCommitsViewModel {
-    let service: Networkable
+public class GitCommitsViewModel {
+    private let service: Networkable
     
     init(service: Networkable = NetworkClient()) {
         self.service = service

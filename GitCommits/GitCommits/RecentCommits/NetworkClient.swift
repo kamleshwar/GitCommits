@@ -13,8 +13,12 @@ public protocol Networkable {
 }
 
 public class NetworkClient: Networkable {
+    let baseURL = "https://api.github.com/repos/"
+    
     public func fetchCommits(completion: @escaping (Result<[Commits], Error>) -> Void) {
-        guard let url = URL(string: "https://api.github.com/repos/ReactiveX/RxSwift/commits") else { return }
+        let path = "ReactiveX/RxSwift/commits"
+        
+        guard let url = URL(string: "\(baseURL)\(path)") else { return }
         let request = URLRequest(url: url)
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
