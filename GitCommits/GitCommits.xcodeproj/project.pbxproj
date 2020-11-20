@@ -85,16 +85,13 @@
 		00AC176925676E5E003CD1EE /* GitCommits */ = {
 			isa = PBXGroup;
 			children = (
+				00AC179225677647003CD1EE /* RecentCommits */,
 				00AC176A25676E5E003CD1EE /* AppDelegate.swift */,
 				00AC176C25676E5E003CD1EE /* SceneDelegate.swift */,
-				00AC176E25676E5E003CD1EE /* ViewController.swift */,
 				00AC177025676E5E003CD1EE /* Main.storyboard */,
 				00AC177325676E62003CD1EE /* Assets.xcassets */,
 				00AC177525676E62003CD1EE /* LaunchScreen.storyboard */,
 				00AC177825676E62003CD1EE /* Info.plist */,
-				00AC178C256770F4003CD1EE /* GitCommitsViewModel.swift */,
-				00AC178E2567730F003CD1EE /* NetworkClient.swift */,
-				00AC179025677553003CD1EE /* CommitsModel.swift */,
 			);
 			path = GitCommits;
 			sourceTree = "<group>";
@@ -106,6 +103,17 @@
 				00AC178325676E62003CD1EE /* Info.plist */,
 			);
 			path = GitCommitsTests;
+			sourceTree = "<group>";
+		};
+		00AC179225677647003CD1EE /* RecentCommits */ = {
+			isa = PBXGroup;
+			children = (
+				00AC178E2567730F003CD1EE /* NetworkClient.swift */,
+				00AC179025677553003CD1EE /* CommitsModel.swift */,
+				00AC178C256770F4003CD1EE /* GitCommitsViewModel.swift */,
+				00AC176E25676E5E003CD1EE /* ViewController.swift */,
+			);
+			path = RecentCommits;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
