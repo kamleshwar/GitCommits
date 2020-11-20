@@ -9,8 +9,13 @@
 import Foundation
 
 class GitCommitsViewModel {
+    let service: Networkable
     
-    public func fetchCommits(completion: @escaping (Result<[String], Error>) -> Void) {
-        // make API Call
+    init(service: Networkable = NetworkClient()) {
+        self.service = service
+    }
+    
+    public func fetchCommits(completion: @escaping (Result<[Commits], Error>) -> Void) {
+        self.service.fetchCommits(completion: completion)
     }
 }

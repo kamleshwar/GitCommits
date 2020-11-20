@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Commits {
+public struct Commits: Decodable {
     let message: String
     let author: String
     let sha: String

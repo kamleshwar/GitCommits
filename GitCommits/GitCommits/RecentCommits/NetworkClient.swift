@@ -8,18 +8,20 @@
 
 import Foundation
 
-protocol Networkable {
-    func fetchCommits(completion: @escaping (Result<[String], Error>) -> Void)
+public protocol Networkable {
+    func fetchCommits(completion: @escaping (Result<[Commits], Error>) -> Void)
 }
 
-class NetworkClient: Networkable {
-    
-    func fetchCommits(completion: @escaping (Result<[String], Error>) -> Void) {
-        guard let url = URL(string: "URLHere") else { return }
+public class NetworkClient: Networkable {
+    public func fetchCommits(completion: @escaping (Result<[Commits], Error>) -> Void) {
+        guard let url = URL(string: "https://api.github.com/repos/ReactiveX/RxSwift/commits") else { return }
         let request = URLRequest(url: url)
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            // Handle Resposne here
+            if let data = data {
+                let commits = try! JSONDecoder().decode([Commits].self, from: data)
+                completion(.success(commits))
+            }
         }
         task.resume()
     }
