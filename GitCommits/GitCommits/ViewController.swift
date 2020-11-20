@@ -15,6 +15,8 @@ import UIKit
     a) Connects to the GitHub API;
     b) Uses that API to retrieve the most recent commits
     c) Displays those commits in a list with the author, commit hash, and commit message.
+ 
+ Git Repo = ReactiveX/RxSwift/
  */
 
 class ViewController: UIViewController {
@@ -26,4 +28,3 @@ class ViewController: UIViewController {
         viewModel.fetchCommits(completion: { _ in })
     }
 }
-
