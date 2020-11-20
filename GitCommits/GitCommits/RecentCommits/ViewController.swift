@@ -28,11 +28,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupSubViews()
+        fetchCommits()
+    }
+    
+    private func setupSubViews() {
         self.tableView.dataSource = self
+        self.tableView.rowHeight = 70
+    }
+    
+    private func fetchCommits() {
         viewModel.fetchCommits() { result in
             switch result {
             case .success(let commits):
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
                     self.commitModels = commits
                     self.tableView.reloadData()
                 }
