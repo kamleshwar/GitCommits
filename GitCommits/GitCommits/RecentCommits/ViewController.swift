@@ -20,7 +20,9 @@ import UIKit
  */
 
 class ViewController: UIViewController {
-    let viewModel = GitCommitsViewModel()
+    private let viewModel = GitCommitsViewModel()
+    private var commitModels = [Commits]()
+    
     @IBOutlet public var tableView : UITableView!
     
     override func viewDidLoad() {
@@ -28,19 +30,28 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.tableView.dataSource = self
         viewModel.fetchCommits() { result in
-            print(result)
+            switch result {
+            case .success(let commits):
+                DispatchQueue.main.async {
+                    self.commitModels = commits
+                    self.tableView.reloadData()
+                }
+            case .failure(_): break
+                // Handle Error
+            }
         }
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return commitModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "commits")
-        cell.textLabel?.text = "Test Commit"
+        let commit = commitModels[indexPath.row]
+        cell.textLabel?.text = commit.commit.author.name
         return cell
     }
 }
