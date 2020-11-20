@@ -14,6 +14,7 @@
 		00AC177425676E62003CD1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00AC177325676E62003CD1EE /* Assets.xcassets */; };
 		00AC177725676E62003CD1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AC177525676E62003CD1EE /* LaunchScreen.storyboard */; };
 		00AC178225676E62003CD1EE /* GitCommitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC178125676E62003CD1EE /* GitCommitsTests.swift */; };
+		00AC178D256770F4003CD1EE /* GitCommitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC178C256770F4003CD1EE /* GitCommitsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		00AC177D25676E62003CD1EE /* GitCommitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitCommitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AC178125676E62003CD1EE /* GitCommitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommitsTests.swift; sourceTree = "<group>"; };
 		00AC178325676E62003CD1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00AC178C256770F4003CD1EE /* GitCommitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommitsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				00AC177325676E62003CD1EE /* Assets.xcassets */,
 				00AC177525676E62003CD1EE /* LaunchScreen.storyboard */,
 				00AC177825676E62003CD1EE /* Info.plist */,
+				00AC178C256770F4003CD1EE /* GitCommitsViewModel.swift */,
 			);
 			path = GitCommits;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AC178D256770F4003CD1EE /* GitCommitsViewModel.swift in Sources */,
 				00AC176F25676E5E003CD1EE /* ViewController.swift in Sources */,
 				00AC176B25676E5E003CD1EE /* AppDelegate.swift in Sources */,
 				00AC176D25676E5E003CD1EE /* SceneDelegate.swift in Sources */,
